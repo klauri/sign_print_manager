@@ -1,0 +1,2 @@
+python-barcode==0.13.1
+fpdf==1.7.2
