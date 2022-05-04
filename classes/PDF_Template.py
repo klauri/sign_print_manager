@@ -14,9 +14,12 @@ class PDF_Template(FPDF):
         self.cell(w, 9, title, 1, 1, 'C', 1)
         self.ln(10)
 
+    def add_image(self, image_path):
+        self.add_page()
+        self.image(image_path, type='PNG', x=90, w=100, h=50)
+
     def footer(self):
         self.set_y(-50)
         self.set_font('Arial', 'I', 8)
         self.set_text_color(128)
         self.image('saved_barcodes/apples.png', type='PNG', x=90, w=100, h=50)
-    
